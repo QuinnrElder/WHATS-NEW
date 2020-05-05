@@ -14,13 +14,15 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      entertainment: entertainment.entertainment,
-      health: health.health,
-      local: local.local,
-      science: science.science,
-      technology: technology.technology,
+      entertainment: entertainment,
+      health: health,
+      local: local,
+      science: science,
+      technology: technology,
     }
   }
+  
+
 
   render () {
     return (

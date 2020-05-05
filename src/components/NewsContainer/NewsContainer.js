@@ -1,23 +1,27 @@
 import './NewsContainer.css'
 import React from 'react';
-import NewsArticle from './NewsArticle'
+import NewsArticle from '../NewsArticle/NewsArticle'
 
 const NewsContainer = (props) => {
 
-  let displayEntertainment = () => {
-
-    return (
-    <NewsArticle />
-    );
+  let displayLocal = (local) => {
+     return local.map(localData => {
+      return (
+        <NewsArticle 
+        id={localData.id}
+        headLine={localData.headLine}
+        img={localData.img}
+        description={localData.description}
+        url={localData.url}
+        />
+        );
+    })
   }
-  let health
-  let local
-  let science
-  let technology
+  
 
   return (
     <section className="news-container">
-      <section></section>
+      {displayLocal(props.newsInfo.local)}
     </section>
   );
 }

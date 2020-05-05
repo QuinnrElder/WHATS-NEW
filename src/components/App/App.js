@@ -19,16 +19,22 @@ class App extends Component {
       local: local,
       science: science,
       technology: technology,
+      selectedTopic: local
     }
   }
   
+  clickHandler = (e) => {
+    const clickValue = e.target.className
+    this.setState( {selectedTopic: this.state[clickValue] } )
+  }
 
+  
 
   render () {
     return (
       <div className="app">
-        <Menu newsInfo={this.state} />
-        <NewsContainer newsInfo={this.state} />
+        <Menu onClick={this.clickHandler} />
+        <NewsContainer newsInfo={this.state.selectedTopic} />
       </div>
     );
   }

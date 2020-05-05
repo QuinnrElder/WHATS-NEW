@@ -2,13 +2,14 @@ import './NewsContainer.css'
 import React from 'react';
 import NewsArticle from '../NewsArticle/NewsArticle'
 
-const NewsContainer = (props) => {
-
-  let displayLocal = (local) => {
-     return local.map(localData => {
+const NewsContainer = ({newsInfo}) => {
+  
+  let displayLocal = (info) => {
+     return info.map(localData => {
       return (
         <NewsArticle 
         id={localData.id}
+        key={localData.id}
         headLine={localData.headLine}
         img={localData.img}
         description={localData.description}
@@ -21,7 +22,7 @@ const NewsContainer = (props) => {
 
   return (
     <section className="news-container">
-      {displayLocal(props.newsInfo.local)}
+      {displayLocal(newsInfo)}
     </section>
   );
 }

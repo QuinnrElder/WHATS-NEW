@@ -1,6 +1,25 @@
-import React from 'react';
 import './NewsContainer.css'
+import React from 'react';
+import NewsArticle from './NewsArticle'
 
-// NEWSCONTAINER COMPONENT CODE GOES HERE
+const NewsContainer = (props) => {
 
-export default NewsContainer;
+  let displayEntertainment = () => {
+
+    return (
+    <NewsArticle />
+    );
+  }
+  let health
+  let local
+  let science
+  let technology
+
+  return (
+    <section className="news-container">
+      <section></section>
+    </section>
+  );
+}
+
+export default NewsContainer

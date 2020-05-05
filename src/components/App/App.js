@@ -1,19 +1,32 @@
 import React, { Component } from 'react';
-import local from '../../data/local';
 import './App.css';
 
+import NewsContainer from '../NewsContainer/NewsContainer';
+import Menu from '../Menu/Menu';
+
+import entertainment from '../../data/entertainment'
+import health from '../../data/health'
+import local from '../../data/local';
+import science from '../../data/science'
+import technology from '../../data/technology'
+
 class App extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      local
+      entertainment: entertainment.entertainment,
+      health: health.health,
+      local: local.local,
+      science: science.science,
+      technology: technology.technology,
     }
   }
 
   render () {
     return (
       <div className="app">
-        YOUR CODE GOES HERE!
+        <Menu newsInfo={this.state} />
+        <NewsContainer newsInfo={this.state} />
       </div>
     );
   }

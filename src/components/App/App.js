@@ -24,8 +24,8 @@ class App extends Component {
   }
   
   clickHandler = (e) => {
-    const clickValue = e.target.className
-    this.setState( {selectedTopic: this.state[clickValue] } )
+    const clickValue = e.target.name
+    this.setState( { selectedTopic: this.state[clickValue] } )
   }
 
   render () {

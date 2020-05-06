@@ -3,18 +3,18 @@ import './NewsArticle.css';
 
 const NewsArticle = ({
   id, 
-  headLine, 
+  headline, 
   img, 
   description, 
   url
 }) => {
 
   return (
-    <section id={id}>
-      <h2>{headLine}</h2>
-      <img src={img}></img>
-      <p>{description}</p>
-      <a href={url}></a>
+    <section id={id} className="news-article">
+      <h2 className="article-header">{headline}</h2>
+      <img src={img} className="article-img" alt="News article"></img>
+      <p className="article-description" >{description}</p>
+      <a href={url} className="article-link" >VIEW THE LINK =></a>
     </section>
   );
 }

@@ -2,9 +2,12 @@
   align-items: center;
   border: 3px solid #e6572f;
   box-shadow: 1.5px 1px 1px 1px #797e76;
+  color: white;
   display: flex;
   flex-direction: column;
+  flex-wrap: wrap;
   height: 100vh;
+  justify-content: space-between;
   overflow: scroll;
   width: 80%;
 }

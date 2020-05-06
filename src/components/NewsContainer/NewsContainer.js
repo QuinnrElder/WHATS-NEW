@@ -1,6 +1,29 @@
-import React from 'react';
 import './NewsContainer.css'
+import React from 'react';
+import NewsArticle from '../NewsArticle/NewsArticle'
 
-// NEWSCONTAINER COMPONENT CODE GOES HERE
+const NewsContainer = ({newsInfo}) => {
+  let displayLocal = (newsInfo) => {
+     return newsInfo.map(localData => {
+      return (
+        <NewsArticle 
+        id={localData.id}
+        key={localData.id}
+        headline={localData.headline}
+        img={localData.img}
+        description={localData.description}
+        url={localData.url}
+        />
+        );
+    })
+  }
+  
 
-export default NewsContainer;
+  return (
+    <section className="news-container">
+      {displayLocal(newsInfo)}
+    </section>
+  );
+}
+
+export default NewsContainer

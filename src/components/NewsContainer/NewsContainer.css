@@ -1,0 +1,10 @@
+.news-container {
+  align-items: center;
+  border: 3px solid #e6572f;
+  box-shadow: 1.5px 1px 1px 1px #797e76;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: scroll;
+  width: 80%;
+}

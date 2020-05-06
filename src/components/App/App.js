@@ -28,8 +28,6 @@ class App extends Component {
     this.setState( {selectedTopic: this.state[clickValue] } )
   }
 
-  
-
   render () {
     return (
       <div className="app">

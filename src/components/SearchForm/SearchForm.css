@@ -1,10 +1,32 @@
 .header-container {
   align-items: center;
+  border: 3px solid #e6572f;
+  border-radius: 3px;
   display: flex;
   height: 20vh;
-  width: 33%;
+  justify-content: space-around;
+  width: 100%;
 }
 
 .header {
+  color: #e6572f;
+  font-family: auto;
+  font-size: 4em;
+}
+
+.user-input {
+  border: 3px solid #e6572f;
+  border-radius: 3px;
+  box-shadow: 1.5px 1px 1px 1px #797e76;
+  height: 40%;
+  width: 20%;
   font-size: 2em;
+}
+
+.search-btn {
+  border: 3px solid #e6572f;
+  border-radius: 3px;
+  box-shadow: 1.5px 1px 1px 1px #797e76;
+  height: 40%;
+  width: 10%;
 }

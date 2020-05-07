@@ -14,4 +14,4 @@ This App intention was to be a starting place to introduce and implement the Rea
 
 When using this ReactApp the intention was to render NewsArticles with set data structures & display them using JSX. With the Menu feature on the right side of page. A user could search for NewsArticles based off of the topic/category chosen. With the search bar at the top of the page the user can search through the present NewsArticles for specific NewsArticle headings. 
 
-![image](/src/components/screenShot.png)
+![image](/src/screenShot.png)

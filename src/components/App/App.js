@@ -29,12 +29,15 @@ class App extends Component {
     this.setState( { selectedTopic: this.state[clickValue] } )
   }
 
-  
+  searchContent(e) {
+    const searchVal = e.target.value
+  }
 
   render () {
     return (
       <div className="app">
-        <SearchForm />
+        <SearchForm onClick={this.searchContent} />
+        {!this.state && <h2>We need some Articles</h2>}
         <div className="main-container">
         <Menu onClick={this.clickHandler} />
         <NewsContainer newsInfo={this.state.selectedTopic}/>

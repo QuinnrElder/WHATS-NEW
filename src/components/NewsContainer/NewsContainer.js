@@ -21,7 +21,9 @@ const NewsContainer = ({newsInfo}) => {
 
   return (
     <section className="news-container">
+      <div className="news-display">
       {displayLocal(newsInfo)}
+      </div>
     </section>
   );
 }

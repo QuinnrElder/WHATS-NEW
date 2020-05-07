@@ -3,6 +3,7 @@ import './App.css';
 
 import NewsContainer from '../NewsContainer/NewsContainer';
 import Menu from '../Menu/Menu';
+import SearchForm from '../SearchForm/SearchForm';
 
 import entertainment from '../../data/entertainment'
 import health from '../../data/health'
@@ -28,11 +29,16 @@ class App extends Component {
     this.setState( { selectedTopic: this.state[clickValue] } )
   }
 
+  
+
   render () {
     return (
       <div className="app">
+        <SearchForm />
+        <div className="main-container">
         <Menu onClick={this.clickHandler} />
-        <NewsContainer newsInfo={this.state.selectedTopic} />
+        <NewsContainer newsInfo={this.state.selectedTopic}/>
+        </div> 
       </div>
     );
   }

@@ -5,9 +5,16 @@
 }
 
 .app {
-  display: flex;
-  background: white;
+  background-color: #304b5e;
   height: 100vh;
+  text-align: center;
+  width: 100%;
+}
+
+.main-container {
+  display: flex;
+  background-color: #304b5e;
+  height: 80vh;
   text-align: center;
   width: 100%;
 }

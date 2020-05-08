@@ -15,7 +15,7 @@
 }
 
 .user-input {
-  border: 3px solid #e6572f;
+  border: 2px solid #e6572f;
   border-radius: 3px;
   box-shadow: 1.5px 1px 1px 1px #797e76;
   height: 40%;
@@ -24,7 +24,7 @@
 }
 
 .search-btn {
-  border: 3px solid #e6572f;
+  border: 2px solid #e6572f;
   border-radius: 3px;
   box-shadow: 1.5px 1px 1px 1px #797e76;
   height: 40%;

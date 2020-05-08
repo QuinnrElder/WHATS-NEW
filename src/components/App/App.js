@@ -20,7 +20,8 @@ class App extends Component {
       local: local,
       science: science,
       technology: technology,
-      selectedTopic: local
+      selectedTopic: local,
+      searchInput: ""
     }
   }
   
@@ -29,18 +30,33 @@ class App extends Component {
     this.setState( { selectedTopic: this.state[clickValue] } )
   }
 
-  searchContent(e) {
-    const searchVal = e.target.value
+  searchContent = (e) => {
+    const searchVal = this.state.searchInput
+    const selectedTopic = this.state.selectedTopic
+    const newVariable = selectedTopic.filter(topic => topic.headline.toLowerCase().includes(searchVal.toLowerCase())) 
+    this.setState({ selectedTopic: newVariable, 
+      searchInput: "",
+    })
+  }
+
+  handleChangeEvent = (e) => {
+    console.log(e.target.value)
+    let { value } = e.target
+    this.setState({searchInput: value})
   }
 
   render () {
     return (
       <div className="app">
-        <SearchForm onClick={this.searchContent} />
+        <SearchForm
+        searchContent={this.searchContent}
+        searchInput={this.state.searchInput}
+        handleChangeEvent={this.handleChangeEvent}
+         />
         {!this.state && <h2>We need some Articles</h2>}
         <div className="main-container">
         <Menu onClick={this.clickHandler} />
-        <NewsContainer newsInfo={this.state.selectedTopic}/>
+        <NewsContainer newsInfo={this.state.selectedTopic} />
         </div> 
       </div>
     );

@@ -1,14 +1,19 @@
 import React from 'react';
 import './SearchForm.css';
 
-const SearchForm = (props) => {
-  console.log(props)
+const SearchForm = ({ searchContent, searchInput, handleChangeEvent }) => {
+  console.log(searchInput)
   return (
     <section className="header-container">
       <h2 className="header">WHAT'S NEW?!?</h2>
-      <input className="user-input"
-      name="searchInput"></input>
-      <button className="search-btn" onClick={props.onClick}>search</button>
+      <input 
+      value={searchInput}
+      className="user-input"
+      name="searchInput"
+      onChange={handleChangeEvent}
+      ></input>
+  
+      <button className="search-btn" onClick={searchContent}>search</button>
     </section>
   )
 }

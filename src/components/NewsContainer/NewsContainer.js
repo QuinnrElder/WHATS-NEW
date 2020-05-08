@@ -3,7 +3,11 @@ import React from 'react';
 import NewsArticle from '../NewsArticle/NewsArticle'
 
 const NewsContainer = ({newsInfo}) => {
+
   let displayLocal = (newsInfo) => {
+    if (!newsInfo.length) {
+      return <h1>There was no search returned please re-choose a category</h1>
+    }
      return newsInfo.map(localData => {
       return (
         <NewsArticle 

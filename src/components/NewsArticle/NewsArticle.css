@@ -1,7 +1,7 @@
 .news-article {
   align-items: center;
   border-radius: 3px;
-  border: 5px solid #e6572f;
+  border: 3px solid #e6572f;
   box-shadow: 1.5px 1px 1px 1px #797e76;
   display: flex;
   flex-direction: column;
@@ -15,33 +15,33 @@
   border-bottom: 2px solid #e6572f;
   padding: 1%;
   width: 100%;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .article-img {
   border-bottom: 2px solid #e6572f;
-  height: 50%;
+  background-size: auto;
+  height: 40%;
   width: 100%;
 }
 
 .article-description {
   border-bottom: 3px solid #e6572f;
-  font-size: 1.5em;
   padding: 1.5%;
   width: 100%;
 }
 
 .links {
   border-radius: 3px;
-  border: 5px solid #e6572f;
+  border: 3px solid #e6572f;
   box-shadow: 1.5px 1px 1px 1px #797e76;
-  margin: 5% 0 3% 0;
+  margin: 4% 0 3% 0;
   width: 70%;
 }
 
 .article-link {
   color: white;
-  font-size: 2em;
+  font-size: 1.5em;
   height: auto;
   padding: 3%;
   width: 70%;
